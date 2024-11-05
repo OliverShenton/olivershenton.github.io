@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 
-<!-- -------------------------------------------------- -->
-<!-- Head -->
-<!-- -------------------------------------------------- -->
 <head lang="en">
   <meta charset="utf-8" />
   <title>Oliver Shenton's CV</title>
   <meta name="author" content="Oliver Shenton" />
   <meta
     name="description"
-    content="The aim is to create my personal CV (curriculum vitae) in the form of a website, with the purpose of securing a job as a software developer!"
+    content="The aim of this website is to present my CV, with the purpose of secruing a development role."
   />
+  <meta name="keywords" content="Web Developer, CV, Oliver Shenton" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="index.css" />
+  <!-- *todo: The background is wrong for the picture, it is square instead of a circle. The picture is also too small, so need a way to make it bigger. -->
   <link rel="icon" type="image/x-icon" href="/pictures/Flavicon.png" />
+  <link rel="stylesheet" href="index.css" />
   <script src="index.js" defer></script>
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-  <meta
-    name="keywords"
-    content="Web Developer, CV, Resume, Oliver Shenton, Developer"
-  />
 </head>
 
-<!-- -------------------------------------------------- -->
-<!-- Header -->
-<!-- -------------------------------------------------- -->
 <header>
   <div class="header_container">
     <h2>Oliver Shenton</h2>
@@ -55,15 +47,19 @@
   </div>
 </header>
 
-<!-- -------------------------------------------------- -->
-<!-- Body -->
-<!-- -------------------------------------------------- -->
 <body>
-  <section class="profile_container">
-    <div id="card" class="card">
-      <img src="/pictures/Profile Picture - B&W.png" title="Oliver Shenton" />
-      <div class="card_title">
+  <section id="about" class="profile_container">
+    <div class="profile_card">
+      <div class="profile_picture">
+        <img
+          src="/pictures/Profile Picture - B&W.png"
+          title="Oliver Shenton"
+          alt="Profile picture of Oliver Shenton"
+        />
+      </div>
+      <div class="profile_content">
         <h1>Oliver Shenton</h1>
+        <hr />
         <h2>Web Developer</h2>
         <div class="card_info">
           <h3>Phone Number:</h3>
@@ -95,402 +91,455 @@
         </div>
       </div>
     </div>
-
-    <div id="about" class="about">
-      <h2>About Me</h2>
-      <p class="about_p1">
-        Hello, and welcome to my portfolio website. I have created this space to
-        showcase my skills, experience, and passion for software development.
+    <div class="about_container">
+      <h2>Hello</h2>
+      <p>
+        Welcome to my website. I have created this space to showcase my skills,
+        experience, and passion for web development.
+      </p>
+      <p>
         This platform serves as a testament to both my technical expertise and
         as a stepping stone to securing a professional role within the field.
       </p>
-      <p class="about_p2">
-        I have been programming for over two years, utilising a diverse range of
-        learning resources. My approach has included online courses and hands-on
-        project development, enabling me to deepen and expand my expertise in
-        programming. This combination of structured learning and practical
-        application has allowed me to continually advance my skills and
-        understanding in the field.
+      <h3>Find out more below...</h3>
+      <p>
+        <strong>Projects</strong> - Explore a selection of projects I have
+        developed independently and collaboratively as part of my online
+        learning journey.
+      </p>
+      <p>
+        <strong>Experience</strong> - Review my experience to see the roles I
+        have undertaken and the skills I have developed.
+      </p>
+      <p>
+        <strong>Education</strong> - Browse an overview of my academic
+        background and qualifications.
       </p>
     </div>
   </section>
 
+  <div class="divide"></div>
+
   <section id="projects" class="projects">
     <h2>Projects</h2>
-    <div class="projects_container">
-      <div>Coming Soon</div>
-      <div class="project_item">
-        <h3>Weather App</h3>
-        <p>Description</p>
-        <p>This is a description for the weather app.</p>
-        <button id="project_button" onclick="weatherApp()">Start</button>
+    <div class="projects_container bottom">
+      <div class="projects_item">
+        <h3>Chat App</h3>
+        <h4>A real-time chat application using socket.io</h4>
+        <div class="project_buttons">
+          <button onclick="githubChatApp()">GitHub</button>
+          <button onclick="chatAppLink()">Open</button>
+        </div>
       </div>
-      <div class="project_item">
-        <h3>To-Do App</h3>
-        <p>Description</p>
-        <p>This is a description for the to-do app.</p>
-        <button onclick="todoApp()">N/A</button>
+      <div class="projects_item">
+        <h3>Guess My Number</h3>
+        <h4>Guess a randomly generated number</h4>
+        <div class="project_buttons">
+          <button onclick="githubGuessMyNumber()">GitHub</button>
+          <button onclick="guessMyNumberLink()">Open</button>
+        </div>
       </div>
-      <div class="project_item">
-        <h3>Banking App</h3>
-        <p>Description</p>
-        <p>This is a description for the banking app.</p>
-        <button onclick="bankingApp()">N/A</button>
+      <div class="projects_item">
+        <h3></h3>
+        <h4>Coming Soon...</h4>
+        <div class="project_buttons">
+          <button onclick="" disabled>GitHub</button>
+          <button onclick="" disabled>Open</button>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="experience" class="experience">
     <h2>Experience</h2>
-    <div class="summary_item">
-      <button class="summary_button">
-        <h3>Web Developer</h3>
-        <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-      </button>
-      <div class="summary_button_panel">
-        <p class="summary_panel_date">2022 - Present</p>
-        <em>Self-Learning</em>
-        <p><strong>Key Skills:</strong></p>
-        <div class="summary_skills">
-          <p>HTML</p>
-          <p>CSS</p>
-          <p>JavaScript</p>
-          <p>Node.js</p>
-          <p>NoSQL</p>
-          <p>REST APIs</p>
-          <p>Visual Studio Code</p>
+    <div class="experience_container">
+      <div class="summary_item">
+        <button class="summary_button">
+          <h3>Web Development</h3>
+          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+        </button>
+        <div class="summary_item_content">
+          <div class="summary_title_date">
+            <h3 class="summary_title">Web Development</h3>
+            <p class="summary_date">2022 - Present</p>
+          </div>
+          <p class="summary_location">Self-Learning</p>
+          <p><strong>Online Course Progression:</strong></p>
+          <div class="course_progression">
+            <p>
+              <a
+                href="https://www.udemy.com/course/the-complete-sql-bootcamp/"
+                target="_blank"
+                >SQL</a
+              >
+              - Completed Aug 2023 (<a
+                href="/Pictures/Certificates/The Complete SQL Bootcamp. Go from Zero to Hero - Certificate of Completion.pdf"
+                target="_blank"
+                >View Certificate</a
+              >)
+            </p>
+            <div class="course_tab sql" title="100%"></div>
+          </div>
+          <div class="course_progression">
+            <p>
+              <a
+                href="https://www.udemy.com/course/the-complete-javascript-course/"
+                target="_blank"
+                >JavaScript</a
+              >
+            </p>
+            <div class="course_tab js" title="66%"></div>
+          </div>
+          <div class="course_progression">
+            <p>
+              <a
+                href="https://www.udemy.com/course/the-complete-nodejs-developer-course-2/"
+                target="_blank"
+                >Node.js</a
+              >
+              - Completed Nov 2024 (<a href="">View Certificate</a>)
+            </p>
+            <div class="course_tab node" title="100%"></div>
+          </div>
+          <ul class="ruler">
+            <li>0%</li>
+            <li>25%</li>
+            <li>50%</li>
+            <li>75%</li>
+            <li>100%</li>
+          </ul>
+          <p><strong>Key Skills:</strong></p>
+          <div class="summary_skills">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>Node.js</p>
+            <p>NoSQL</p>
+            <p>NPM</p>
+            <p>MongoDB</p>
+            <p>Socket.IO</p>
+            <p>Mongoose</p>
+            <p>REST API Design</p>
+            <p>Code Testing</p>
+            <p>Debugging</p>
+            <p>Jest</p>
+          </div>
+          <ul class="summary_bullet">
+            <li>
+              Currently undertaking several courses online, including an overall
+              JavaScript course, having already completed a course on SQL and
+              Node.js.
+            </li>
+            <li>Built REST API's using Node.js, Express, and Mongoose.</li>
+            <li>
+              Single-handedly researched, designed, programmed, debugged, and
+              published three mobile applications to the Google Play Store,
+              resulting in over 1,000 downloads.
+            </li>
+            <li style="list-style: none">
+              Note: These are no longer supported and have been removed from the
+              Google Play Store, but you can find them on my GitHub.
+            </li>
+            <li>
+              Proficient in HTML, CSS, JavaScript, and SQL, with some working
+              knowledge of Java.
+            </li>
+            <li>
+              Familiar with software development tools such as Visual Studio
+              Code (primary IDE), Node.js, MongoDB, Android Studio, API usage,
+              GitHub, Git, Heroku, and IntelliJ IDEA.
+            </li>
+          </ul>
         </div>
-        <p><strong>Courses:</strong></p>
-        <div class="course_meter">
-          <h5>
-            <a
-              href="https://www.udemy.com/course/the-complete-sql-bootcamp/"
-              target="_blank"
-              >SQL</a
-            >
-            - Completed Aug 2023
-            <a
-              href="/Pictures/Certificates/The Complete SQL Bootcamp. Go from Zero to Hero - Certificate of Completion.jpg"
-              target="_blank"
-              >(View Certificate)</a
-            >
-          </h5>
-          <div class="course_tab sql"></div>
-        </div>
-        <div class="course_meter">
-          <h5>
-            <a
-              href="https://www.udemy.com/course/the-complete-javascript-course/"
-              target="_blank"
-              >JavaScript</a
-            >
-          </h5>
-          <div class="course_tab js"></div>
-        </div>
-        <div class="course_meter">
-          <h5>
-            <a
-              href="https://www.udemy.com/course/the-complete-nodejs-developer-course-2/"
-              target="_blank"
-              >Node.js</a
-            >
-          </h5>
-          <div class="course_tab node"></div>
-        </div>
-        <div class="course_meter">
-          <h5>
-            <a
-              href="https://www.udemy.com/course/java-the-complete-java-developer-course/"
-              target="_blank"
-              >Java</a
-            >
-          </h5>
-          <div class="course_tab java"></div>
-        </div>
-        <ul class="ruler">
-          <li>0%</li>
-          <li>25%</li>
-          <li>50%</li>
-          <li>75%</li>
-          <li>100%</li>
-        </ul>
-        <ul class="summary_list">
-          <li>
-            Currently undertaking several courses online, including an overall
-            JavaScript course and a Node.js course, having already completed a
-            course on SQL.
-          </li>
-          <li>Built REST API's using Node.js, Express, and Mongoose.</li>
-          <li>
-            Single-handedly researched, designed, programmed, debugged, and
-            published three mobile applications to the Google Play Store,
-            resulting in over 1,000 downloads.
-          </li>
-          <li style="list-style: none">
-            Note: These are no longer supported and have been removed from the
-            Google Play Store, but you can find them on my GitHub.
-          </li>
-          <li>
-            Proficient in HTML, CSS, JavaScript, and SQL, with some working
-            knowledge of Java.
-          </li>
-          <li>
-            Familiar with software development tools such as Visual Studio Code
-            (primary IDE), Node.js, MongoDB, Android Studio, API usage, GitHub,
-            Git, Heroku, and IntelliJ IDEA.
-          </li>
-        </ul>
       </div>
-    </div>
-    <div class="summary_item">
-      <button class="summary_button">
-        <h3>DNA Analyst</h3>
-        <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-      </button>
-      <div class="summary_button_panel">
-        <p class="summary_panel_date">07/2021 - Present</p>
-        <em>Eurofins Forensic Services - Birchwood Park, Risley, WA36FW</em>
-        <p><strong>Key Skills:</strong></p>
-        <div class="summary_skills">
-          <p>User Acceptance Testing</p>
-          <p>Lab Owner</p>
-          <p>Lab Trainer</p>
-          <p>Troubleshooting</p>
-          <p>Laboratory Skills</p>
-          <p>Analytical Skills</p>
+      <div class="summary_item">
+        <button class="summary_button">
+          <h3>DNA Analyst</h3>
+          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+        </button>
+        <div class="summary_item_content">
+          <div class="summary_title_date">
+            <h3 class="summary_title">DNA Analyst</h3>
+            <p class="summary_date">07/2021 - Present</p>
+          </div>
+          <p class="summary_location">
+            Eurofins Forensic Services - Birchwood Park, Risley, WA36FW
+          </p>
+          <p><strong>Key Skills:</strong></p>
+          <div class="summary_skills">
+            <p>User Acceptance Testing</p>
+            <p>Lab Owner</p>
+            <p>Lab Trainer</p>
+            <p>Troubleshooting</p>
+            <p>Lab Skills</p>
+            <p>Analytical Skills</p>
+          </div>
+          <ul class="summary_bullet">
+            <li>Progressed to an Established DNA Analyst role.</li>
+            <li>
+              Regularly collaborate with Laboratory Information Management
+              System (LIMS) developers, the Quality department, and Technical
+              Specialists to perform user acceptance tests and provide
+              comprehensive test cases, streamlining day-to-day processes within
+              the labs.
+            </li>
+            <li>
+              Serve as a lab trainer and owner, responsible for training new
+              starters, supporting the lab team, and leading the labs on a
+              day-to-day basis; serving as a point of contact for production
+              supervisors and ensuring that the lab is regularly maintained and
+              adheres to POFA and accreditation certifications.
+            </li>
+            <li>
+              Troubleshoot experimental issues, address frequent technical
+              challenges, and ensure the smooth operation of lab processes.
+            </li>
+            <li>
+              Proficient in a range of experimental techniques, including PCR,
+              electrophoresis, DNA analysis, manual tissue extraction, and robot
+              handling and maintenance.
+            </li>
+            <li>
+              Applied analytical skills to assess DNA results, make informed
+              decisions, document lab procedures, and maintain precision in
+              sample processing, ensuring the timely and accurate release of
+              results to assist law enforcement.
+            </li>
+            <li>
+              High levels of precision to handle and process large deliveries of
+              DNA samples, ensuring an accurate, reliable, and timely release of
+              sample results.
+            </li>
+          </ul>
         </div>
-        <ul class="summary_list">
-          <li>Progressed to an Established DNA Analyst role.</li>
-          <li>
-            Collaborated with Laboratory Information Management System (LIMS)
-            developers, the Quality department, and Technical Specialists to
-            perform user acceptance tests and provide comprehensive test cases,
-            streamlining day-to-day processes within the labs.
-          </li>
-          <li>
-            Serve as a lab trainer and owner, responsible for training new
-            starters, supporting the lab team, and leading the labs on a
-            day-to-day basis; serving as a point of contact for production
-            supervisors and ensuring that the lab is regularly maintained and
-            adheres to POFA and accreditation certifications.
-          </li>
-          <li>
-            Troubleshoot experimental issues, address frequent technical
-            challenges, and ensure the smooth operation of lab processes.
-          </li>
-          <li>
-            Proficient in a range of experimental techniques, including PCR,
-            electrophoresis, DNA analysis, manual tissue extraction, and robot
-            handling and maintenance.
-          </li>
-          <li>
-            Applied analytical skills to assess DNA results, make informed
-            decisions, document lab procedures, and maintain precision in sample
-            processing, ensuring the timely and accurate release of results to
-            assist law enforcement.
-          </li>
-          <li>
-            High levels of precision to handle and process large deliveries of
-            DNA samples, ensuring an accurate, reliable, and timely release of
-            sample results.
-          </li>
-        </ul>
       </div>
-    </div>
-    <div class="summary_item">
-      <button class="summary_button">
-        <h3>Bar Team Member</h3>
-        <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-      </button>
-      <div class="summary_button_panel">
-        <p class="summary_panel_date">04/2019 - 08/2022</p>
-        <em>Brunning & Price - The Old Hall, Sandbach, CW111AL </em>
-        <em>Stonegate Group - The Kiln, Newcastle-Under-Lyme, ST51PS</em>
-        <p><strong>Key Skills:</strong></p>
-        <div class="summary_skills">
-          <p>Customer Service</p>
-          <p>Multi-tasking</p>
-          <p>Attention to Detail</p>
-          <p>Communication</p>
-          <p>Time Management</p>
+      <div class="summary_item">
+        <button class="summary_button">
+          <h3>Bar Team Member</h3>
+          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+        </button>
+        <div class="summary_item_content">
+          <div class="summary_title_date">
+            <h3 class="summary_title">Bar Team Member</h3>
+            <p class="summary_date">04/2019 - 08/2022</p>
+          </div>
+          <p class="summary_location">
+            Brunning & Price - The Old Hall, Sandbach, CW111AL
+          </p>
+          <p>Stonegate Group - The Kiln, Newcastle-Under-Lyme, ST51PS</p>
+          <p><strong>Key Skills:</strong></p>
+          <div class="summary_skills">
+            <p>Customer Service</p>
+            <p>Multi-tasking</p>
+            <p>Attention to Detail</p>
+            <p>Communication</p>
+            <p>Time Management</p>
+          </div>
+          <ul class="summary_bullet">
+            <li>
+              Developed exceptional customer service skills by efficiently
+              managing high-volume orders while ensuring a positive and
+              welcoming experience for customers.
+            </li>
+            <li>
+              Ensured quality and consistency when handling customer orders,
+              following customer preferences, and reducing wait times.
+            </li>
+            <li>
+              Adhered to laws, regulations, and policies, including those
+              governing the sale of alcoholic beverages.
+            </li>
+            <li>
+              Processed customer payments accurately, handling cash and
+              operating point-of-sale systems.
+            </li>
+            <li>
+              Honed the ability to manage multiple tasks simultaneously, such as
+              taking orders, preparing drinks, handling payments, and cleaning
+              the bar area.
+            </li>
+            <li>
+              Developed problem-solving skills and the ability to handle various
+              situations or customer complaints calmly and professionally,
+              ensuring a positive outcome for both the customer and the
+              establishment.
+            </li>
+          </ul>
         </div>
-        <ul class="summary_list">
-          <li>
-            Developed exceptional customer service skills by efficiently
-            managing high-volume orders while ensuring a positive and welcoming
-            experience for customers.
-          </li>
-          <li>
-            Ensured quality and consistency when handling customer orders,
-            following customer preferences, and reducing wait times.
-          </li>
-          <li>
-            Adhered to laws, regulations, and policies, including those
-            governing the sale of alcoholic beverages.
-          </li>
-          <li>
-            Processed customer payments accurately, handling cash and operating
-            point-of-sale systems.
-          </li>
-          <li>
-            Honed the ability to manage multiple tasks simultaneously, such as
-            taking orders, preparing drinks, handling payments, and cleaning the
-            bar area.
-          </li>
-          <li>
-            Developed problem-solving skills and the ability to handle various
-            situations or customer complaints calmly and professionally,
-            ensuring a positive outcome for both the customer and the
-            establishment.
-          </li>
-        </ul>
       </div>
-    </div>
-    <div class="summary_item">
-      <button class="summary_button">
-        <h3>Swimming Teacher</h3>
-        <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-      </button>
-      <div class="summary_button_panel">
-        <p class="summary_panel_date">04/2014 - 09/2019</p>
-        <em>Sandbach Sharks Amateur Swimming Club - Sandbach</em>
-        <p><strong>Key Skills:</strong></p>
-        <div class="summary_skills">
-          <p>Leadership</p>
-          <p>Discipline</p>
-          <p>Adaptability</p>
-          <p>Organisation</p>
-          <p>Responsibility</p>
+      <div class="summary_item bottom">
+        <button class="summary_button">
+          <h3>Swimming Teacher</h3>
+          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+        </button>
+        <div class="summary_item_content">
+          <div class="summary_title_date">
+            <h3 class="summary_title">Swimming Teacher</h3>
+            <p class="summary_date">04/2014 - 09/2019</p>
+          </div>
+          <p class="summary_location">
+            Sandbach Sharks Amateur Swimming Club - Sandbach
+          </p>
+          <p><strong>Key Skills:</strong></p>
+          <div class="summary_skills">
+            <p>Leadership</p>
+            <p>Discipline</p>
+            <p>Adaptability</p>
+            <p>Organisation</p>
+            <p>Responsibility</p>
+          </div>
+          <ul class="summary_bullet">
+            <li>Achieved a Level 1 Swimming Teacher Qualification.</li>
+            <li>
+              Taught swimming techniques to over 100 children and teenagers
+              (ages 5-16), ensuring skill progression and water safety awareness
+              through tailored lessons for different abilities.
+            </li>
+            <li>
+              Developed strong communication skills by clearly explaining
+              complex swimming techniques to individuals with varying learning
+              needs.
+            </li>
+            <li>
+              Ensured a safe and stimulating learning environment by closely
+              monitoring students' performance, attendance, and achievements,
+              which were fed back to both students and guardians to aid in their
+              development.
+            </li>
+            <li>
+              Enforced rules and regulations to ensure a safe and secure
+              swimming environment and monitored for potential hazardous
+              situations.
+            </li>
+            <li>
+              Routinely assessed and graded swimmers based on a set of criteria.
+            </li>
+          </ul>
         </div>
-        <ul class="summary_list">
-          <li>Achieved a Level 1 Swimming Teacher Qualification.</li>
-          <li>
-            Taught swimming techniques to over 100 children and teenagers (ages
-            5-16), ensuring skill progression and water safety awareness through
-            tailored lessons for different abilities.
-          </li>
-          <li>
-            Developed strong communication skills by clearly explaining complex
-            swimming techniques to individuals with varying learning needs.
-          </li>
-          <li>
-            Ensured a safe and stimulating learning environment by closely
-            monitoring students' performance, attendance, and achievements,
-            which were fed back to both students and guardians to aid in their
-            development.
-          </li>
-          <li>
-            Enforced rules and regulations to ensure a safe and secure swimming
-            environment and monitored for potential hazardous situations.
-          </li>
-          <li>
-            Routinely assessed and graded swimmers based on a set of criteria.
-          </li>
-        </ul>
       </div>
     </div>
   </section>
 
   <section id="education" class="education">
     <h2>Education</h2>
-    <div class="summary_item">
-      <button class="summary_button">
-        <h3>Keele University</h3>
-        <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-      </button>
-      <div class="summary_button_panel">
-        <p class="summary_panel_date">2016 - 2020</p>
-        <em>Lennard-Jones Building, Keele, Newcastle-Under-Lyme, ST55BG</em>
-
-        <ul class="summary_list">
-          <li>Bachelor of Science (BSc) Hons: Forensic Science.</li>
-          <li>Second Class Honours.</li>
-          <li>
-            Conducted an in-depth dissertation analysing the impact of DNA
-            phenotyping on racial profiling, exploring its ethical implications
-            and influence on law enforcement practices.
-          </li>
-          <li>
-            Completed an intensive 40-hour forensic training programme at the
-            Body Farm in Tennessee, specialising in the study of human body
-            decomposition and its forensic application.
-          </li>
-          <li>
-            Participated in a collaborative project on 'The Metabolomics of
-            Death,' measuring phosphorus and sulphur levels in the heart and
-            lungs of cow and pig specimens over six months to assess the
-            accuracy of determining time of death in decaying corpses.
-          </li>
-        </ul>
+    <div class="education_container">
+      <div class="summary_item">
+        <button class="summary_button">
+          <h3>Keele University</h3>
+          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+        </button>
+        <div class="summary_item_content">
+          <div class="summary_title_date">
+            <h3 class="summary_title">Keele University</h3>
+            <p class="summary_date">2016 - 2020</p>
+          </div>
+          <p class="summary_location">
+            Lennard-Jones Building, Keele, Newcastle-Under-Lyme, ST55BG
+          </p>
+          <ul class="summary_bullet">
+            <li>Bachelor of Science (BSc) Hons: Forensic Science.</li>
+            <li>Second Class Honours.</li>
+            <li>
+              Conducted an in-depth dissertation analysing the impact of DNA
+              phenotyping on racial profiling, exploring its ethical
+              implications and influence on law enforcement practices.
+            </li>
+            <li>
+              Completed an intensive 40-hour forensic training programme at the
+              Body Farm in Tennessee, specialising in the study of human body
+              decomposition and its forensic application.
+            </li>
+            <li>
+              Participated in a collaborative project on 'The Metabolomics of
+              Death,' measuring phosphorus and sulphur levels in the heart and
+              lungs of cow and pig specimens over six months to assess the
+              accuracy of determining time of death in decaying corpses.
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="summary_item">
-      <button class="summary_button">
-        <h3>Vocational Placement</h3>
-        <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-      </button>
-      <div class="summary_button_panel">
-        <p class="summary_panel_date">06/2019 - 09/2019</p>
-        <em>The Christies NHS Foundation Trust - Manchester, M204BX</em>
-        <ul class="summary_list">
-          <li>
-            Collaborated with PhD students, doctors, and fellow undergraduates
-            to advance proton therapy research.
-          </li>
-          <li>
-            Analysed complex datasets related to the BRCA2 gene, ensuring
-            accuracy and relevance for ongoing cancer research.
-          </li>
-          <li>
-            Developed strong data manipulation skills by using Python to process
-            and model large datasets, then inserting them into a model designed
-            to calibrate proton therapy beams.
-          </li>
-        </ul>
+      <div class="summary_item">
+        <button class="summary_button">
+          <h3>Vocational Placement</h3>
+          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+        </button>
+        <div class="summary_item_content">
+          <div class="summary_title_date">
+            <h3 class="summary_title">Vocational Placement</h3>
+            <p class="summary_date">06/2019 - 09/2019</p>
+          </div>
+          <p class="summary_location">
+            The Christies NHS Foundation Trust - Manchester, M204BX
+          </p>
+          <ul class="summary_bullet">
+            <li>
+              Collaborated with PhD students, doctors, and fellow undergraduates
+              to advance proton therapy research.
+            </li>
+            <li>
+              Analysed complex datasets related to the BRCA2 gene, ensuring
+              accuracy and relevance for ongoing cancer research.
+            </li>
+            <li>
+              Developed strong data manipulation skills by using Python to
+              process and model large datasets, then inserting them into a model
+              designed to calibrate proton therapy beams.
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="summary_item">
-      <button class="summary_button">
-        <h3>Sandbach School</h3>
-        <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-      </button>
-      <div class="summary_button_panel">
-        <p class="summary_panel_date">2009 - 2016</p>
-        <em>Crewe Road, Sandbach, CW113NS</em>
-        <ul class="summary_list">
-          <li>
-            Achieved the following A-Level results: Geography (B), History (C),
-            Biology (C), and AS Maths (E).
-          </li>
-          <li>
-            Earned 10 GCSEs, including 5 As and 5 Bs, with top grades in Maths
-            (A), English Literature (A), and English Language (B).
-          </li>
-        </ul>
+      <div class="summary_item">
+        <button class="summary_button">
+          <h3>Sandbach School</h3>
+          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+        </button>
+        <div class="summary_item_content">
+          <div class="summary_title_date">
+            <h3 class="summary_title">Sandbach School</h3>
+            <p class="summary_date">2009 - 2016</p>
+          </div>
+          <p class="summary_location">Crewe Road, Sandbach, CW113NS</p>
+          <ul class="summary_bullet">
+            <li>
+              Achieved the following A-Level results: Geography (B), History
+              (C), Biology (C), and AS Maths (E).
+            </li>
+            <li>
+              Earned 10 GCSEs, including 5 As and 5 Bs, with top grades in Maths
+              (A), English Literature (A), and English Language (B).
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="summary_item">
-      <button class="summary_button">
-        <h3>Other</h3>
-        <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-      </button>
-      <div class="summary_button_panel">
-        <p class="summary_panel_date">...</p>
-        <em>...</em>
-        <ul class="summary_list">
-          <li>Full UK driving licence.</li>
-          <li>
-            Black belt in mixed martial arts: karate, kickboxing, and Brazilian
-            jiu-jitsu.
-          </li>
-          <li>Novice-level Photoshop skills.</li>
-        </ul>
+      <div class="summary_item bottom">
+        <button class="summary_button">
+          <h3>Other</h3>
+          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+        </button>
+        <div class="summary_item_content">
+          <div class="summary_title_date">
+            <h3 class="summary_title">Other</h3>
+            <p class="summary_date">...</p>
+          </div>
+          <p class="summary_location">...</p>
+          <ul class="summary_bullet">
+            <li>Full UK driving licence.</li>
+            <li>
+              Black belt in mixed martial arts: karate, kickboxing, and
+              Brazilian jiu-jitsu.
+            </li>
+            <li>Novice-level Photoshop skills.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 </body>
 
-<footer id="footer" class="footer">
-  <h3>Created by Oliver Shenton</h3>
-  <h5>Last updated: 22/10/2024</h5>
+<footer>
+  <div class="footer_container">
+    <h3>Created by Oliver Shenton</h3>
+    <h5>Last updated: 22/10/2024</h5>
+    <h6>All rights reserved</h6>
+  </div>
 </footer>
