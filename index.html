@@ -1,549 +1,355 @@
 <!DOCTYPE html>
 
-<head lang="en">
-  <meta charset="utf-8" />
-  <title>Oliver Shenton's CV</title>
-  <meta name="author" content="Oliver Shenton" />
-  <meta
-    name="description"
-    content="The aim of this website is to present my CV, with the purpose of secruing a development role."
-  />
-  <meta name="keywords" content="Web Developer, CV, Oliver Shenton" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- *todo: The background is wrong for the picture, it is square instead of a circle. The picture is also too small, so need a way to make it bigger. -->
-  <link rel="icon" type="image/x-icon" href="/pictures/Flavicon.png" />
-  <link rel="stylesheet" href="index.css" />
-  <script src="index.js" defer></script>
-  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-</head>
+<html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="author" content="Oliver Shenton" />
+      <meta
+        name="description"
+        content="Explore Oliver Shenton's CV showcasing web development skills and passion."
+      />
+      <meta
+        name="keywords"
+        content="Web Developer, Oliver Shenton, Portfolio, Resume, CV, Web Development Skills"
+      />
+      <meta http-equiv="Content-Language" content="en" />
+      <title>Oliver Shenton | Web Developer CV & Portfolio</title>
+      <link rel="stylesheet" href="styles/small.css" />
+      <link
+        rel="stylesheet"
+        media="screen and (min-width:900px)"
+        href="styles/large.css"
+      />
+      <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+      <link rel="preload" href="styles/small.css" as="style" />
+      <link rel="preload" href="styles/large.css" as="style" />
+      <link rel="preload" href="/assets/favicon.png" as="image" />
+    </head>
 
-<header>
-  <div class="header_container">
-    <h2>Oliver Shenton</h2>
-    <nav id="navigation_bar" class="navigation_bar">
-      <a href="#about" class="navigation_link">About Me</a>
-      <a href="#projects" class="navigation_link">Projects</a>
-      <a href="#experience" class="navigation_link">Experience</a>
-      <a href="#education" class="navigation_link">Education</a>
-      <a
-        href="/cv/Oliver Shenton CV.pdf"
-        class="navigation_link"
-        target="_blank"
-        >View CV</a
-      >
-    </nav>
-    <div class="navigation_dropdown">
-      <button
-        id="navigation_button"
-        class="navigation_button"
-        onclick="toggleNavigation()"
-      >
-        <iconify-icon
-          id="navigation_icon"
-          icon="f7:line-horizontal-3"
-        ></iconify-icon>
-      </button>
-    </div>
-  </div>
-</header>
-
-<body>
-  <section id="about" class="profile_container">
-    <div class="profile_card">
-      <div class="profile_picture">
-        <img
-          src="/pictures/Profile Picture - B&W.png"
-          title="Oliver Shenton"
-          alt="Profile picture of Oliver Shenton"
-        />
-      </div>
-      <div class="profile_content">
-        <h1>Oliver Shenton</h1>
-        <hr />
-        <h2>Web Developer</h2>
-        <div class="card_info">
-          <h3>Phone Number:</h3>
-          <p>(+44)7473826533</p>
-          <h3>Email:</h3>
-          <p>olivermshenton@hotmail.com</p>
-          <h3>Location:</h3>
-          <p>Sandbach, CW11</p>
+    <body>
+      <header id="header">
+        <div id="header-inner">
+          <h2>Oliver Shenton</h2>
+          <div id="header-button" onclick="toggleNav(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav id="header-nav">
+            <span><a href="#">About Me</a></span>
+            <span><a href="#projects" class="nav-link">Projects</a></span>
+            <span><a href="#experience" class="nav-link">Experience</a></span>
+            <span><a href="#education" class="nav-link">Education</a></span>
+            <span><a href="#contact" class="nav-link">Contact</a></span>
+          </nav>
         </div>
-        <div class="card_icons">
+      </header>
+
+      <main>
+        <section id="hero">
+          <div id="hero-inner">
+            <div class="left-column">
+              <h1>Web Designer & Developer</h1>
+              <hr class="hero-hr" />
+              <div class="hero-content">
+                <p class="content-margin"><strong>Address:</strong></p>
+                <p>Sandbach, Cheshire, CW11</p>
+              </div>
+              <div class="hero-content">
+                <p class="content-margin"><strong>Email:</strong></p>
+                <p>
+                  <a
+                    href="mailto:olivermshenton@outlook.com"
+                    title="Email"
+                    target="_blank"
+                    >olivermshenton@outlook.com</a
+                  >
+                </p>
+              </div>
+              <div class="hero-content">
+                <p class="content-margin"><strong>Phone:</strong></p>
+                <p>(+44)7473826533</p>
+              </div>
+              <div class="hero-button-wrapper">
+                <a id="hero-button" href="#"><span>DOWNLOAD CV</span></a>
+              </div>
+            </div>
+            <div class="right-column">
+              <img src="/assets/fake-profile.webp" />
+            </div>
+          </div>
+        </section>
+        <section id="about-me">
+          <div id="about-me-inner-container">
+            <div class="left-column">
+              <div class="progress-container">
+                <div
+                  class="circle-container"
+                  data-label="JavaScript"
+                  data-percent="66"
+                >
+                  <div class="circle">
+                    <span>66%</span>
+                  </div>
+                  <p>JavaScript</p>
+                </div>
+                <div
+                  class="circle-container"
+                  data-label="SQL"
+                  data-percent="100"
+                >
+                  <div class="circle">
+                    <span>100%</span>
+                  </div>
+                  <p>SQL</p>
+                </div>
+                <div
+                  class="circle-container"
+                  data-label="Node.js"
+                  data-percent="100"
+                >
+                  <div class="circle">
+                    <span>100%</span>
+                  </div>
+                  <p>Node.js</p>
+                </div>
+                <div
+                  class="circle-container"
+                  data-label="React"
+                  data-percent="6"
+                >
+                  <div class="circle">
+                    <span>6%</span>
+                  </div>
+                  <p>React</p>
+                </div>
+              </div>
+            </div>
+            <div class="right-column">
+              <h2>Hello</h2>
+              <p class="about-me-content">
+                My name is Oliver, and I am a dedicated web developer with a
+                strong foundation in crafting responsive and efficient web
+                applications. Proficient in core technologies such as HTML, CSS,
+                JavaScript, Node.js, and SQL, I specialize in building dynamic,
+                user-centric solutions that align with modern web standards.
+                Currently, I am expanding my expertise by learning React,
+                enabling me to create more interactive and scalable front-end
+                experiences.
+              </p>
+              <hr class="about-me-hr" />
+              <h3 class="about-me-content">Courses Completed:</h3>
+              <p class="about-me-content">
+                <strong>SQL</strong> -
+                <a
+                  href="https://www.udemy.com/course/the-complete-sql-bootcamp/"
+                  >The Complete SQL Bootcamp: Go from Zero to Hero
+                </a>
+              </p>
+              <p class="about-me-content">
+                <strong>Node.js</strong> -
+                <a
+                  href="https://www.udemy.com/course/the-complete-nodejs-developer-course-2/"
+                  >The Complete Node.js Developer Course</a
+                >
+              </p>
+              <hr class="about-me-hr" />
+              <h3 class="about-me-content">Courses In Progress:</h3>
+              <p class="about-me-content">
+                <strong>JavaScript</strong> -
+                <a
+                  href="https://www.udemy.com/course/the-complete-javascript-course/"
+                  >The Complete JavaScript Course 2025: From Zero to Expert!
+                </a>
+              </p>
+              <p class="about-me-content">
+                <strong>React</strong> -
+                <a
+                  href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
+                  >React - The Complete Guide 2024 (incl. Next.js, Redux)</a
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="projects">
+          <div id="projects-inner-container">
+            <hr class="section-hr" />
+            <h2>Projects</h2>
+            <div id="projects-card-container">
+              <article class="card">
+                <img
+                  class="card-background"
+                  src="/assets/chat-app.webp"
+                  width="1920"
+                  height="2193"
+                />
+                <div class="card-content | flow">
+                  <div class="card-content-container | flow">
+                    <h2 class="card-title">Real-Time Chat</h2>
+                  </div>
+                  <a
+                    href="https://github.com/OliverShenton/os-nodejs-chat-app"
+                    target="_blank"
+                  >
+                    <button class="card-button">Source Code</button></a
+                  >
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  class="card-background"
+                  src="/assets/budget-tracker.webp"
+                  width="1920"
+                  height="2193"
+                />
+                <div class="card-content | flow">
+                  <div class="card-content-container | flow">
+                    <h2 class="card-title">Budget Tracker</h2>
+                  </div>
+                  <a
+                    href="https://github.com/OliverShenton/budget-tracker-app"
+                    target="_blank"
+                  >
+                    <button class="card-button">Source Code</button></a
+                  >
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  class="card-background"
+                  src="/assets/task-manager.webp"
+                  width="1920"
+                  height="2193"
+                />
+                <div class="card-content | flow">
+                  <div class="card-content-container | flow">
+                    <h2 class="card-title">Task Manager</h2>
+                  </div>
+                  <a
+                    href="https://github.com/OliverShenton/task-management-app"
+                    target="_blank"
+                  >
+                    <button class="card-button">Source Code</button></a
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section id="experience">
+          <hr class="section-hr" />
+          <div id="experience-inner-container">
+            <h2>Experience</h2>
+            <hr />
+            <div class="experience-container">
+              <div class="experience-card">
+                <div class="experience-header">
+                  <span class="experience-date">2022 – Present</span>
+                  <span class="experience-title">Web Developer</span>
+                </div>
+                <p class="experience-location">Freelance</p>
+                <p class="experience-description"></p>
+              </div>
+            </div>
+            <hr />
+            <div class="experience-container">
+              <div class="experience-card">
+                <div class="experience-header">
+                  <span class="experience-date">07/2021 – Present</span>
+                  <span class="experience-title">DNA Analyst</span>
+                </div>
+                <p class="experience-location">
+                  Eurofins Forensic Services - Birchwood Park, Risley, WA36FW
+                </p>
+                <p class="experience-description"></p>
+              </div>
+            </div>
+            <hr />
+            <div class="experience-container">
+              <div class="experience-card">
+                <div class="experience-header">
+                  <span class="experience-date">04/2019 – 08/2022</span>
+                  <span class="experience-title">Bar Team Member</span>
+                </div>
+                <p class="experience-location">
+                  Brunning & Price - The Old Hall, Sandbach, CW111AL
+                </p>
+                <p class="experience-location">
+                  Stonegate Group - The Kiln, Newcastle-Under-Lyme, ST51PS
+                </p>
+                <p class="experience-description"></p>
+              </div>
+            </div>
+            <hr />
+            <div class="experience-container">
+              <div class="experience-card">
+                <div class="experience-header">
+                  <span class="experience-date">04/2014 – 09/2019</span>
+                  <span class="experience-title">Swimming Teacher</span>
+                </div>
+                <p class="experience-location">
+                  Sandbach Sharks Amateur Swimming Club - Sandbach
+                </p>
+                <p class="experience-description"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="education">
+          <hr class="section-hr" />
+          <div id="education-inner-container">
+            <h2>Education</h2>
+          </div>
+        </section>
+        <section id="contact">
+          <hr class="section-hr" />
+          <div id="contact-inner-container">
+            <h2>Get In Touch</h2>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <div class="footer-content">
+          <p>
+            &copy; <span id="current-year">2024</span> Oliver Shenton's CV -
+            Created by Oliver Shenton
+          </p>
+          <p>
+            Last updated: <time datetime="2024-12-03">13 December 2024</time>
+          </p>
+        </div>
+        <div class="footer-social">
           <a
-            href="https://github.com/OliverShenton"
-            title="Github"
+            href="https://www.linkedin.com/in/olivershenton"
             target="_blank"
-            ><iconify-icon icon="ant-design:github-filled"></iconify-icon
-          ></a>
+            rel="noopener"
+            aria-label="LinkedIn Profile"
+            >LinkedIn</a
+          >
+          |
           <a
-            href="https://www.linkedin.com/in/olivershenton/"
-            title="LinkedIn"
+            href="https://github.com/olivershenton"
             target="_blank"
-            ><iconify-icon icon="basil:linkedin-outline"></iconify-icon
-          ></a>
+            rel="noopener"
+            aria-label="GitHub Profile"
+            >GitHub</a
+          >
+          |
           <a
-            href="mailto:olivermshenton@hotmail.com"
-            title="Email"
-            target="_blank"
-            ><iconify-icon icon="ic:outline-email"></iconify-icon
-          ></a>
+            href="mailto:olivermshenton@outlook.com"
+            aria-label="Email Oliver Shenton"
+            >Email</a
+          >
         </div>
-      </div>
-    </div>
-    <div class="about_container">
-      <h2>Hello</h2>
-      <p>
-        Welcome to my website. I have created this space to showcase my skills,
-        experience, and passion for web development.
-      </p>
-      <p>
-        This platform serves as a testament to both my technical expertise and
-        as a stepping stone to securing a professional role within the field.
-      </p>
-      <h3>Find out more below...</h3>
-      <p>
-        <strong>Projects</strong> - Explore a selection of projects I have
-        developed independently and collaboratively as part of my online
-        learning journey.
-      </p>
-      <p>
-        <strong>Experience</strong> - Review my experience to see the roles I
-        have undertaken and the skills I have developed.
-      </p>
-      <p>
-        <strong>Education</strong> - Browse an overview of my academic
-        background and qualifications.
-      </p>
-    </div>
-  </section>
+      </footer>
 
-  <div class="divide"></div>
-
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="projects_container bottom">
-      <div class="projects_item">
-        <h3>Chat App</h3>
-        <h4>A real-time chat application using socket.io</h4>
-        <div class="project_buttons">
-          <button onclick="githubChatApp()">GitHub</button>
-          <button onclick="chatAppLink()">Open</button>
-        </div>
-      </div>
-      <div class="projects_item">
-        <h3>Guess My Number</h3>
-        <h4>Guess a randomly generated number</h4>
-        <div class="project_buttons">
-          <button onclick="githubGuessMyNumber()">GitHub</button>
-          <button onclick="guessMyNumberLink()">Open</button>
-        </div>
-      </div>
-      <div class="projects_item">
-        <h3></h3>
-        <h4>Coming Soon...</h4>
-        <div class="project_buttons">
-          <button onclick="" disabled>GitHub</button>
-          <button onclick="" disabled>Open</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="experience">
-    <h2>Experience</h2>
-    <div class="experience_container">
-      <div class="summary_item">
-        <button class="summary_button">
-          <h3>Web Development</h3>
-          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-        </button>
-        <div class="summary_item_content">
-          <div class="summary_title_date">
-            <h3 class="summary_title">Web Development</h3>
-            <p class="summary_date">2022 - Present</p>
-          </div>
-          <p class="summary_location">Self-Learning</p>
-          <p><strong>Online Course Progression:</strong></p>
-          <div class="course_progression">
-            <p>
-              <a
-                href="https://www.udemy.com/course/the-complete-sql-bootcamp/"
-                target="_blank"
-                >SQL</a
-              >
-              - Completed Aug 2023 (<a
-                href="/pictures/Certificates/The Complete SQL Bootcamp. Go from Zero to Hero - Certificate of Completion.pdf"
-                target="_blank"
-                >View Certificate</a
-              >)
-            </p>
-            <div class="course_tab sql" title="100%"></div>
-          </div>
-          <div class="course_progression">
-            <p>
-              <a
-                href="https://www.udemy.com/course/the-complete-javascript-course/"
-                target="_blank"
-                >JavaScript</a
-              >
-            </p>
-            <div class="course_tab js" title="66%"></div>
-          </div>
-          <div class="course_progression">
-            <p>
-              <a
-                href="https://www.udemy.com/course/the-complete-nodejs-developer-course-2/"
-                target="_blank"
-                >Node.js</a
-              >
-              - Completed Nov 2024 (<a
-                href="/pictures/Certificates/The Complete Node.js Developer Course - Certificate of Completion.pdf"
-                target="_blank"
-                >View Certificate</a
-              >)
-            </p>
-            <div class="course_tab node" title="100%"></div>
-          </div>
-          <ul class="ruler">
-            <li>0%</li>
-            <li>25%</li>
-            <li>50%</li>
-            <li>75%</li>
-            <li>100%</li>
-          </ul>
-          <p><strong>Key Skills:</strong></p>
-          <div class="summary_skills">
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JavaScript</p>
-            <p>Node.js</p>
-            <p>NoSQL</p>
-            <p>NPM</p>
-            <p>MongoDB</p>
-            <p>Socket.IO</p>
-            <p>Mongoose</p>
-            <p>REST API Design</p>
-            <p>Code Testing</p>
-            <p>Debugging</p>
-            <p>Jest</p>
-          </div>
-          <ul class="summary_bullet">
-            <li>
-              Currently undertaking several courses online, including an overall
-              JavaScript course, having already completed a course on SQL and
-              Node.js.
-            </li>
-            <li>Built REST API's using Node.js, Express, and Mongoose.</li>
-            <li>
-              Single-handedly researched, designed, programmed, debugged, and
-              published three mobile applications to the Google Play Store,
-              resulting in over 1,000 downloads.
-            </li>
-            <li style="list-style: none">
-              Note: These are no longer supported and have been removed from the
-              Google Play Store, but you can find them on my GitHub.
-            </li>
-            <li>
-              Proficient in HTML, CSS, JavaScript, and SQL, with some working
-              knowledge of Java.
-            </li>
-            <li>
-              Familiar with software development tools such as Visual Studio
-              Code (primary IDE), Node.js, MongoDB, Android Studio, API usage,
-              GitHub, Git, Heroku, and IntelliJ IDEA.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="summary_item">
-        <button class="summary_button">
-          <h3>DNA Analyst</h3>
-          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-        </button>
-        <div class="summary_item_content">
-          <div class="summary_title_date">
-            <h3 class="summary_title">DNA Analyst</h3>
-            <p class="summary_date">07/2021 - Present</p>
-          </div>
-          <p class="summary_location">
-            Eurofins Forensic Services - Birchwood Park, Risley, WA36FW
-          </p>
-          <p><strong>Key Skills:</strong></p>
-          <div class="summary_skills">
-            <p>User Acceptance Testing</p>
-            <p>Lab Owner</p>
-            <p>Lab Trainer</p>
-            <p>Troubleshooting</p>
-            <p>Lab Skills</p>
-            <p>Analytical Skills</p>
-          </div>
-          <ul class="summary_bullet">
-            <li>Progressed to an Established DNA Analyst role.</li>
-            <li>
-              Regularly collaborate with Laboratory Information Management
-              System (LIMS) developers, the Quality department, and Technical
-              Specialists to perform user acceptance tests and provide
-              comprehensive test cases, streamlining day-to-day processes within
-              the labs.
-            </li>
-            <li>
-              Serve as a lab trainer and owner, responsible for training new
-              starters, supporting the lab team, and leading the labs on a
-              day-to-day basis; serving as a point of contact for production
-              supervisors and ensuring that the lab is regularly maintained and
-              adheres to POFA and accreditation certifications.
-            </li>
-            <li>
-              Troubleshoot experimental issues, address frequent technical
-              challenges, and ensure the smooth operation of lab processes.
-            </li>
-            <li>
-              Proficient in a range of experimental techniques, including PCR,
-              electrophoresis, DNA analysis, manual tissue extraction, and robot
-              handling and maintenance.
-            </li>
-            <li>
-              Applied analytical skills to assess DNA results, make informed
-              decisions, document lab procedures, and maintain precision in
-              sample processing, ensuring the timely and accurate release of
-              results to assist law enforcement.
-            </li>
-            <li>
-              High levels of precision to handle and process large deliveries of
-              DNA samples, ensuring an accurate, reliable, and timely release of
-              sample results.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="summary_item">
-        <button class="summary_button">
-          <h3>Bar Team Member</h3>
-          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-        </button>
-        <div class="summary_item_content">
-          <div class="summary_title_date">
-            <h3 class="summary_title">Bar Team Member</h3>
-            <p class="summary_date">04/2019 - 08/2022</p>
-          </div>
-          <p class="summary_location">
-            Brunning & Price - The Old Hall, Sandbach, CW111AL
-          </p>
-          <p>Stonegate Group - The Kiln, Newcastle-Under-Lyme, ST51PS</p>
-          <p><strong>Key Skills:</strong></p>
-          <div class="summary_skills">
-            <p>Customer Service</p>
-            <p>Multi-tasking</p>
-            <p>Attention to Detail</p>
-            <p>Communication</p>
-            <p>Time Management</p>
-          </div>
-          <ul class="summary_bullet">
-            <li>
-              Developed exceptional customer service skills by efficiently
-              managing high-volume orders while ensuring a positive and
-              welcoming experience for customers.
-            </li>
-            <li>
-              Ensured quality and consistency when handling customer orders,
-              following customer preferences, and reducing wait times.
-            </li>
-            <li>
-              Adhered to laws, regulations, and policies, including those
-              governing the sale of alcoholic beverages.
-            </li>
-            <li>
-              Processed customer payments accurately, handling cash and
-              operating point-of-sale systems.
-            </li>
-            <li>
-              Honed the ability to manage multiple tasks simultaneously, such as
-              taking orders, preparing drinks, handling payments, and cleaning
-              the bar area.
-            </li>
-            <li>
-              Developed problem-solving skills and the ability to handle various
-              situations or customer complaints calmly and professionally,
-              ensuring a positive outcome for both the customer and the
-              establishment.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="summary_item bottom">
-        <button class="summary_button">
-          <h3>Swimming Teacher</h3>
-          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-        </button>
-        <div class="summary_item_content">
-          <div class="summary_title_date">
-            <h3 class="summary_title">Swimming Teacher</h3>
-            <p class="summary_date">04/2014 - 09/2019</p>
-          </div>
-          <p class="summary_location">
-            Sandbach Sharks Amateur Swimming Club - Sandbach
-          </p>
-          <p><strong>Key Skills:</strong></p>
-          <div class="summary_skills">
-            <p>Leadership</p>
-            <p>Discipline</p>
-            <p>Adaptability</p>
-            <p>Organisation</p>
-            <p>Responsibility</p>
-          </div>
-          <ul class="summary_bullet">
-            <li>Achieved a Level 1 Swimming Teacher Qualification.</li>
-            <li>
-              Taught swimming techniques to over 100 children and teenagers
-              (ages 5-16), ensuring skill progression and water safety awareness
-              through tailored lessons for different abilities.
-            </li>
-            <li>
-              Developed strong communication skills by clearly explaining
-              complex swimming techniques to individuals with varying learning
-              needs.
-            </li>
-            <li>
-              Ensured a safe and stimulating learning environment by closely
-              monitoring students' performance, attendance, and achievements,
-              which were fed back to both students and guardians to aid in their
-              development.
-            </li>
-            <li>
-              Enforced rules and regulations to ensure a safe and secure
-              swimming environment and monitored for potential hazardous
-              situations.
-            </li>
-            <li>
-              Routinely assessed and graded swimmers based on a set of criteria.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education" class="education">
-    <h2>Education</h2>
-    <div class="education_container">
-      <div class="summary_item">
-        <button class="summary_button">
-          <h3>Keele University</h3>
-          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-        </button>
-        <div class="summary_item_content">
-          <div class="summary_title_date">
-            <h3 class="summary_title">Keele University</h3>
-            <p class="summary_date">2016 - 2020</p>
-          </div>
-          <p class="summary_location">
-            Lennard-Jones Building, Keele, Newcastle-Under-Lyme, ST55BG
-          </p>
-          <ul class="summary_bullet">
-            <li>Bachelor of Science (BSc) Hons: Forensic Science.</li>
-            <li>Second Class Honours.</li>
-            <li>
-              Conducted an in-depth dissertation analysing the impact of DNA
-              phenotyping on racial profiling, exploring its ethical
-              implications and influence on law enforcement practices.
-            </li>
-            <li>
-              Completed an intensive 40-hour forensic training programme at the
-              Body Farm in Tennessee, specialising in the study of human body
-              decomposition and its forensic application.
-            </li>
-            <li>
-              Participated in a collaborative project on 'The Metabolomics of
-              Death,' measuring phosphorus and sulphur levels in the heart and
-              lungs of cow and pig specimens over six months to assess the
-              accuracy of determining time of death in decaying corpses.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="summary_item">
-        <button class="summary_button">
-          <h3>Vocational Placement</h3>
-          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-        </button>
-        <div class="summary_item_content">
-          <div class="summary_title_date">
-            <h3 class="summary_title">Vocational Placement</h3>
-            <p class="summary_date">06/2019 - 09/2019</p>
-          </div>
-          <p class="summary_location">
-            The Christies NHS Foundation Trust - Manchester, M204BX
-          </p>
-          <ul class="summary_bullet">
-            <li>
-              Collaborated with PhD students, doctors, and fellow undergraduates
-              to advance proton therapy research.
-            </li>
-            <li>
-              Analysed complex datasets related to the BRCA2 gene, ensuring
-              accuracy and relevance for ongoing cancer research.
-            </li>
-            <li>
-              Developed strong data manipulation skills by using Python to
-              process and model large datasets, then inserting them into a model
-              designed to calibrate proton therapy beams.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="summary_item">
-        <button class="summary_button">
-          <h3>Sandbach School</h3>
-          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-        </button>
-        <div class="summary_item_content">
-          <div class="summary_title_date">
-            <h3 class="summary_title">Sandbach School</h3>
-            <p class="summary_date">2009 - 2016</p>
-          </div>
-          <p class="summary_location">Crewe Road, Sandbach, CW113NS</p>
-          <ul class="summary_bullet">
-            <li>
-              Achieved the following A-Level results: Geography (B), History
-              (C), Biology (C), and AS Maths (E).
-            </li>
-            <li>
-              Earned 10 GCSEs, including 5 As and 5 Bs, with top grades in Maths
-              (A), English Literature (A), and English Language (B).
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="summary_item bottom">
-        <button class="summary_button">
-          <h3>Other</h3>
-          <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
-        </button>
-        <div class="summary_item_content">
-          <div class="summary_title_date">
-            <h3 class="summary_title">Other</h3>
-            <p class="summary_date">...</p>
-          </div>
-          <p class="summary_location">...</p>
-          <ul class="summary_bullet">
-            <li>Full UK driving licence.</li>
-            <li>
-              Black belt in mixed martial arts: karate, kickboxing, and
-              Brazilian jiu-jitsu.
-            </li>
-            <li>Novice-level Photoshop skills.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-</body>
-
-<footer>
-  <div class="footer_container">
-    <h3>Created by Oliver Shenton</h3>
-    <h5>Last updated: 22/10/2024</h5>
-    <h6>All rights reserved</h6>
-  </div>
-</footer>
+      <script src="/scripts/small.js"></script>
+      <script src="/scripts/large.js"></script>
+      <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    </body>
+  </html>
+</html>
