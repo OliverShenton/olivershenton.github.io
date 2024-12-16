@@ -2,12 +2,12 @@
 
 function triggerProgressAnimation(entry) {
   const container = entry.target;
-  const circle = container.querySelector(".circle");
-  const label = container.querySelector("p");
-  const span = container.querySelector("span");
+  const circle = container.querySelector('.circle');
+  const label = container.querySelector('p');
+  const span = container.querySelector('span');
 
-  const percent = container.getAttribute("data-percent");
-  const labelText = container.getAttribute("data-label");
+  const percent = container.getAttribute('data-percent');
+  const labelText = container.getAttribute('data-label');
 
   label.textContent = labelText;
 
@@ -28,7 +28,7 @@ function triggerProgressAnimation(entry) {
 
 const observer = new IntersectionObserver(
   (entries, observer) => {
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         triggerProgressAnimation(entry);
         observer.unobserve(entry.target);
@@ -38,29 +38,29 @@ const observer = new IntersectionObserver(
   { threshold: 0.1 }
 );
 
-document.querySelectorAll(".circle-container").forEach((container) => {
+document.querySelectorAll('.circle-container').forEach(container => {
   observer.observe(container);
 });
 
-document.querySelectorAll(".circle").forEach((circle) => {
-  circle.addEventListener("mouseenter", () => {
-    circle.classList.add("bouncing");
+document.querySelectorAll('.circle').forEach(circle => {
+  circle.addEventListener('mouseenter', () => {
+    circle.classList.add('bouncing');
   });
 
-  circle.addEventListener("animationend", () => {
-    circle.classList.remove("bouncing");
+  circle.addEventListener('animationend', () => {
+    circle.classList.remove('bouncing');
   });
 });
 
 // ! Projects Card Animations
 
-const cards = document.querySelectorAll(".card");
+const cards = document.querySelectorAll('.card');
 const cardObserver = new IntersectionObserver(
   (entries, cardObserver) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
         setTimeout(() => {
-          entry.target.classList.add("pop-up");
+          entry.target.classList.add('pop-up');
         }, index * 500);
         cardObserver.unobserve(entry.target);
       }
@@ -69,4 +69,18 @@ const cardObserver = new IntersectionObserver(
   { threshold: 0.1 }
 );
 
-cards.forEach((card) => cardObserver.observe(card));
+cards.forEach(card => cardObserver.observe(card));
+
+// ! Download CV Animations
+
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector('#hero-button');
+
+  button.addEventListener('mouseenter', () => {
+    button.classList.add('sheen-active');
+
+    setTimeout(() => {
+      button.classList.remove('sheen-active');
+    }, 1200);
+  });
+});

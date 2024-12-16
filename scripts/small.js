@@ -1,40 +1,51 @@
 // ! Navigation Menu Toggle
 
 function toggleNav(element) {
-  element.classList.toggle("active");
+  element.classList.toggle('active');
 
-  const navMenu = document.getElementById("header-nav");
+  const navMenu = document.getElementById('header-nav1');
+  navMenu.classList.toggle('active');
 
-  navMenu.classList.toggle("active");
-
-  if (navMenu.classList.contains("active")) {
-    window.addEventListener("click", closeOnOutsideClick);
+  if (navMenu.classList.contains('active')) {
+    setTimeout(() => window.addEventListener('click', closeOnOutsideClick), 0);
   } else {
-    window.removeEventListener("click", closeOnOutsideClick);
+    window.removeEventListener('click', closeOnOutsideClick);
   }
+
+  const navLinks = document.querySelectorAll('#header-nav1 a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => closeNav());
+  });
+}
+
+function closeNav() {
+  const navButton = document.getElementById('header-button');
+  const navMenu = document.getElementById('header-nav1');
+
+  navButton.classList.remove('active');
+  navMenu.classList.remove('active');
+  window.removeEventListener('click', closeOnOutsideClick);
 }
 
 function closeOnOutsideClick(event) {
-  const navButton = document.getElementById("header-button");
-  const navMenu = document.getElementById("header-nav");
+  const navButton = document.getElementById('header-button');
+  const navMenu = document.getElementById('header-nav1');
 
   if (!navButton.contains(event.target) && !navMenu.contains(event.target)) {
-    navButton.classList.remove("active");
-    navMenu.classList.remove("active");
-    window.removeEventListener("click", closeOnOutsideClick);
+    closeNav();
   }
 }
 
 // ! Experience Progress circles
 
-document.querySelectorAll(".progress").forEach((progress) => {
-  const percentage = parseInt(progress.getAttribute("data-percentage"));
-  const caption = progress.getAttribute("data-caption");
-  const link = progress.getAttribute("data-link");
-  const linkText = progress.getAttribute("data-link-text");
-  const target = progress.getAttribute("data-link-target") || "_self";
+document.querySelectorAll('.progress').forEach(progress => {
+  const percentage = parseInt(progress.getAttribute('data-percentage'));
+  const caption = progress.getAttribute('data-caption');
+  const link = progress.getAttribute('data-link');
+  const linkText = progress.getAttribute('data-link-text');
+  const target = progress.getAttribute('data-link-target') || '_self';
 
-  progress.style.setProperty("--progress", percentage);
+  progress.style.setProperty('--progress', percentage);
 
   progress.innerHTML = `
         <svg viewBox="0 0 120 120">
@@ -50,22 +61,23 @@ document.querySelectorAll(".progress").forEach((progress) => {
 function scrollToElementWithOffset(event) {
   event.preventDefault();
 
-  const targetId = event.target.getAttribute("href");
+  const targetId = event.target.getAttribute('href');
   const targetElement = document.querySelector(targetId);
 
   if (targetElement) {
     const offset = 92;
-    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+    const elementPosition =
+      targetElement.getBoundingClientRect().top + window.pageYOffset;
     const offsetPosition = elementPosition - offset;
 
     window.scrollTo({
       top: offsetPosition,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }
 }
 
-const scrollLinks = document.querySelectorAll(".nav-link");
-scrollLinks.forEach((link) => {
-  link.addEventListener("click", scrollToElementWithOffset);
+const scrollLinks = document.querySelectorAll('.nav-link');
+scrollLinks.forEach(link => {
+  link.addEventListener('click', scrollToElementWithOffset);
 });

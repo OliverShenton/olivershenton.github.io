@@ -30,7 +30,7 @@
 
     <body>
       <header id="header">
-        <div id="header-inner">
+        <div id="header-inner-container">
           <h2>Oliver Shenton</h2>
           <div id="header-button" onclick="toggleNav(this)">
             <span></span>
@@ -41,43 +41,70 @@
             <span><a href="#">About Me</a></span>
             <span><a href="#projects" class="nav-link">Projects</a></span>
             <span><a href="#experience" class="nav-link">Experience</a></span>
-            <span><a href="#education" class="nav-link">Education</a></span>
             <span><a href="#contact" class="nav-link">Contact</a></span>
           </nav>
         </div>
       </header>
 
+      <nav id="header-nav1" class="header-nav">
+        <ul>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
       <main>
         <section id="hero">
-          <div id="hero-inner">
-            <div class="left-column">
+          <div id="hero-inner-container">
+            <div class="left-column left-animation">
               <h1>Web Designer & Developer</h1>
               <hr class="hero-hr" />
-              <div class="hero-content">
-                <p class="content-margin"><strong>Address:</strong></p>
-                <p>Sandbach, Cheshire, CW11</p>
-              </div>
-              <div class="hero-content">
-                <p class="content-margin"><strong>Email:</strong></p>
-                <p>
-                  <a
-                    href="mailto:olivermshenton@outlook.com"
-                    title="Email"
-                    target="_blank"
-                    >olivermshenton@outlook.com</a
-                  >
-                </p>
-              </div>
-              <div class="hero-content">
-                <p class="content-margin"><strong>Phone:</strong></p>
-                <p>(+44)7473826533</p>
+              <div class="hero-content-container">
+                <div class="hero-content-labels">
+                  <p><strong>Address:</strong></p>
+                  <p><strong>Email:</strong></p>
+                  <p><strong>Phone:</strong></p>
+                  <p><strong>LinkedIn:</strong></p>
+                  <p><strong>GitHub:</strong></p>
+                </div>
+                <div class="hero-content-details">
+                  <p>Sandbach, Cheshire, CW11</p>
+                  <p>
+                    <a
+                      href="mailto:olivermshenton@outlook.com"
+                      title="Email"
+                      target="_blank"
+                      >olivermshenton@outlook.com</a
+                    >
+                  </p>
+                  <p>(+44)7473826533</p>
+                  <p>
+                    <a
+                      href="https://www.linkedin.com/in/olivershenton/"
+                      target="_blank"
+                      >LinkedIn Profile</a
+                    >
+                  </p>
+                  <p>
+                    <a href="https://github.com/OliverShenton" target="_blank"
+                      >GitHub Profile</a
+                    >
+                  </p>
+                </div>
               </div>
               <div class="hero-button-wrapper">
-                <a id="hero-button" href="#"><span>DOWNLOAD CV</span></a>
+                <a
+                  id="hero-button"
+                  href="/assets/Oliver Shenton.pdf"
+                  target="_blank"
+                  ><span>DOWNLOAD CV</span></a
+                >
               </div>
             </div>
-            <div class="right-column">
-              <img src="/assets/fake-profile.webp" />
+            <div class="right-column right-animation">
+              <img src="/assets/hero.webp" />
             </div>
           </div>
         </section>
@@ -87,7 +114,7 @@
               <div class="progress-container">
                 <div
                   class="circle-container"
-                  data-label="JavaScript"
+                  data-label="HTML, CSS & JavaScript"
                   data-percent="66"
                 >
                   <div class="circle">
@@ -178,7 +205,48 @@
           <div id="projects-inner-container">
             <hr class="section-hr" />
             <h2>Projects</h2>
-            <div id="projects-card-container">
+            <div id="projects-card-container-small">
+              <div class="card">
+                <img src="/assets/chat-app.webp" alt="Card Image" />
+                <div class="card-content">
+                  <h2 class="card-title">Real-Time Chat</h2>
+                  <p class="card-description"></p>
+                </div>
+                <a
+                  href="https://github.com/OliverShenton/os-nodejs-chat-app"
+                  target="_blank"
+                  class="card-btn"
+                  >Learn More</a
+                >
+              </div>
+              <div class="card">
+                <img src="/assets/budget-tracker.webp" alt="Card Image" />
+                <div class="card-content">
+                  <h2 class="card-title">Budget Tracker</h2>
+                  <p class="card-description"></p>
+                </div>
+                <a
+                  href="https://github.com/OliverShenton/budget-tracker-app"
+                  target="_blank"
+                  class="card-btn"
+                  >Learn More</a
+                >
+              </div>
+              <div class="card">
+                <img src="/assets/task-manager.webp" alt="Card Image" />
+                <div class="card-content">
+                  <h2 class="card-title">Task Manager</h2>
+                  <p class="card-description"></p>
+                </div>
+                <a
+                  href="https://github.com/OliverShenton/budget-tracker-app"
+                  target="_blank"
+                  class="card-btn"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+            <div id="projects-card-container-large">
               <article class="card">
                 <img
                   class="card-background"
@@ -251,7 +319,37 @@
                   <span class="experience-title">Web Developer</span>
                 </div>
                 <p class="experience-location">Freelance</p>
-                <p class="experience-description"></p>
+                <div class="experience-skills">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>NoSQL</span>
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>MongoDB</span>
+                  <span>Socket.io</span>
+                  <span>Debugging</span>
+                  <span>Code Testing</span>
+                  <span>Git & GitHub</span>
+                </div>
+                <ul class="experience-content">
+                  <li>
+                    Continuously enhance web develoment skills through
+                    self-directed learning, and practical application, ensuring
+                    proficiency in developing efficient solutions and staying
+                    up-to-date with industry best practices.
+                  </li>
+                  <li>
+                    Researched, designed, developed (in Java), debugged, and
+                    published three mobile applications to the Google Play
+                    Store, achieving over 1,000 downloads.
+                  </li>
+                  <li>
+                    Familiar with development tools such as Visual Studio Code
+                    (primary IDE), Node.js, MongoDB, GitHub, Heroku, and API
+                    integration.
+                  </li>
+                </ul>
               </div>
             </div>
             <hr />
@@ -264,7 +362,48 @@
                 <p class="experience-location">
                   Eurofins Forensic Services - Birchwood Park, Risley, WA36FW
                 </p>
-                <p class="experience-description"></p>
+                <div class="experience-skills">
+                  <span>User Acceptance Testing</span>
+                  <span>Laboratory Owner</span>
+                  <span>Laboratory Trainer</span>
+                  <span>Troubleshooting</span>
+                  <span>Robot Maintenance</span>
+                  <span>Laboratory Skills</span>
+                  <span>Analytical Skills</span>
+                </div>
+                <ul class="experience-content">
+                  <li>Progressed to an Established DNA Analyst role.</li>
+                  <li>
+                    Acted as a laboratory trainer, responsible for training new
+                    team members, through structured and effective practises,
+                    ensuring team rediness and facilitating their seamless
+                    integration into the team.
+                  </li>
+                  <li>
+                    Served as a laboratory manager, undertaking diverse
+                    responsibilities including responding to queries,
+                    prioritising workloads, coordinating with Production
+                    Supervisors, and ensuring the timely release of samples.
+                  </li>
+                  <li>
+                    Proficient in a range of experimental techniques, including
+                    PCR, electrophoresis, DNA analysis, manual tissue
+                    extraction, and robot handling and maintenance.
+                  </li>
+                  <li>
+                    Troubleshoot experimental issues, addressing frequent
+                    technical challenges, and ensure the smooth operation of lab
+                    processes.
+                  </li>
+                  <li>
+                    Regularly collaborated with Laboratory Information
+                    Management System (LIMS) developers, the Quality department,
+                    and Technical Specialists to conduct user acceptance testing
+                    and deliver comprehensive test cases. Focused on optimising
+                    laboratory workflows and streamlining day-to-day processes
+                    to enhance operational efficiency.
+                  </li>
+                </ul>
               </div>
             </div>
             <hr />
@@ -280,7 +419,44 @@
                 <p class="experience-location">
                   Stonegate Group - The Kiln, Newcastle-Under-Lyme, ST51PS
                 </p>
-                <p class="experience-description"></p>
+                <div class="experience-skills">
+                  <span>Customer Service</span>
+                  <span>Multi-tasking</span>
+                  <span>Attention to Detail</span>
+                  <span>Communication</span>
+                  <span>Time Management</span>
+                </div>
+                <ul class="experience-content">
+                  <li>
+                    Developed exceptional customer service skills by efficiently
+                    managing high-volume orders while ensuring a positive and
+                    welcoming experience for customers.
+                  </li>
+                  <li>
+                    Ensured quality and consistency when handling customer
+                    orders, following customer preferences, and reducing wait
+                    times.
+                  </li>
+                  <li>
+                    Adhered to laws, regulations, and policies, including those
+                    governing the sale of alcoholic beverages.
+                  </li>
+                  <li>
+                    Processed customer payments accurately, handling cash and
+                    operating point-of-sale systems.
+                  </li>
+                  <li>
+                    Honed the ability to manage multiple tasks simultaneously,
+                    such as taking orders, preparing drinks, handling payments,
+                    and cleaning the bar area.
+                  </li>
+                  <li>
+                    Developed problem-solving skills and the ability to handle
+                    various situations or customer complaints calmly and
+                    professionally, ensuring a positive outcome for both the
+                    customer and the establishment.
+                  </li>
+                </ul>
               </div>
             </div>
             <hr />
@@ -293,21 +469,88 @@
                 <p class="experience-location">
                   Sandbach Sharks Amateur Swimming Club - Sandbach
                 </p>
-                <p class="experience-description"></p>
+                <div class="experience-skills">
+                  <span>Leadership</span>
+                  <span>Discipline</span>
+                  <span>Adaptability</span>
+                  <span>Organisation</span>
+                  <span>Responsibility</span>
+                </div>
+                <ul class="experience-content">
+                  <li>Achieved a Level 1 Swimming Teacher Qualification.</li>
+                  <li>
+                    Taught swimming techniques to over 100 children and
+                    teenagers (ages 3 - 16), ensuring skill progression and
+                    water safety awareness through tailored lessons for
+                    different abilities.
+                  </li>
+                  <li>
+                    Developed strong communication skills by clearly explaining
+                    complex swimming techniques to individuals with varying
+                    learning needs.
+                  </li>
+                  <li>
+                    Ensured a safe and stimulating learning environment by
+                    closely monitoring students' performance, attendance, and
+                    achievements, which were fed back to both students and
+                    guardians to aid in their development.
+                  </li>
+                  <li>
+                    Enforced rules and regulations to ensure a safe and secure
+                    swimming environment and monitored for potential hazardous
+                    situations.
+                  </li>
+                  <li>
+                    Routinely assessed and graded swimmers based on a set of
+                    criteria.
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-        </section>
-        <section id="education">
-          <hr class="section-hr" />
-          <div id="education-inner-container">
-            <h2>Education</h2>
           </div>
         </section>
         <section id="contact">
           <hr class="section-hr" />
           <div id="contact-inner-container">
             <h2>Get In Touch</h2>
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="https://formspree.io/f/xgvejvvy"
+              method="POST"
+              target="_blank"
+            >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Your Phone"
+                required
+              />
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit">Send Message</button>
+              <div id="status"></div>
+            </form>
           </div>
         </section>
       </main>
@@ -319,7 +562,7 @@
             Created by Oliver Shenton
           </p>
           <p>
-            Last updated: <time datetime="2024-12-03">13 December 2024</time>
+            Last updated: <time datetime="2024-12-03">16 December 2024</time>
           </p>
         </div>
         <div class="footer-social">
