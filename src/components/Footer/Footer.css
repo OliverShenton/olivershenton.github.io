@@ -1,0 +1,25 @@
+footer {
+  background-color: #1a1a1a;
+  color: #d3d3d3;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.footer-inner p {
+  margin-bottom: 5px;
+}
+
+.footer-inner div a {
+  color: #007bff;
+  margin: 0 10px;
+}
+
+.footer-inner div a:hover {
+  text-decoration: underline;
+}

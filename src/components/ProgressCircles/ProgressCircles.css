@@ -1,0 +1,86 @@
+.progress-circles-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  gap: 20px;
+  z-index: 999;
+}
+
+.circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  z-index: 999;
+}
+
+.circle {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  background: conic-gradient(#4a90e2 calc(var(--percentage) * 1%), #eee 0%);
+  transition: background 1s linear;
+}
+
+.circle span {
+  /* position: absolute; */
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+  text-align: center;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  background: #1a1a1a;
+  border-radius: 50%;
+}
+
+.circle-container p {
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@keyframes bounceWithTwoPeaks {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  42% {
+    transform: translateY(0);
+  }
+  54% {
+    transform: translateY(-5px);
+  }
+  66% {
+    transform: translateY(0);
+  }
+  78% {
+    transform: translateY(-2.5px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+}
+
+.circle.bouncing {
+  animation: bounceWithTwoPeaks 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
