@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fd1f5952.css",
+    "main.js": "/static/js/main.feb6036a.js",
+    "static/media/noughts-and-crosses.webp": "/static/media/noughts-and-crosses.2c87937d7c839ee2ab7e.webp",
+    "static/media/page-2.png": "/static/media/page-2.b937bebbf304177ab4e0.png",
+    "static/media/page-1.png": "/static/media/page-1.59a3ab59445c30459af4.png",
+    "static/media/e-commerce.webp": "/static/media/e-commerce.5d96758e103c474b9b26.webp",
+    "static/media/chat.webp": "/static/media/chat.0a3836276ac1e31c1345.webp",
+    "static/media/weather.webp": "/static/media/weather.2a014858f99fc517187f.webp",
+    "index.html": "/index.html",
+    "main.fd1f5952.css.map": "/static/css/main.fd1f5952.css.map",
+    "main.feb6036a.js.map": "/static/js/main.feb6036a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd1f5952.css",
+    "static/js/main.feb6036a.js"
+  ]
+}

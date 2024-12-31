@@ -1,8 +1,0 @@
-.projects-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  max-width: 1200px;
-  margin: auto;
-  flex-wrap: wrap;
-}
