@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://OliverShenton/olivershenton.github.io",
+  "homepage": "https://OliverShenton.github.io/olivershenton.github.io",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
